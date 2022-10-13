@@ -1,15 +1,14 @@
 
 import sys
 
-num1 = list(map(int, input().split()))
-num2 = list(map(int, input().split()))
-
-for i in range(len(num2)-len(num1)+1):
-	if num1==num2[i:len(num1)]:
+num1 = tuple(map(int, input().split()))
+num2 = tuple(map(int, input().split()))
+for i in range (0,2):
+	if num1[0]==num2[i] and num1[1]==num2[i+1] and num1[2]==num2[i+2]:
 		print("True")
 		break
-	else:
-		print("False")
+else:
+	print("False")
 # ******************************
 # Make your Code
 # ******************************
